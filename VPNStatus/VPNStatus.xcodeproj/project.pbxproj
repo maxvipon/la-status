@@ -22,6 +22,8 @@
 		BF0000000000000000000013 /* VPNStatusStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000023 /* VPNStatusStorage.swift */; };
 		BF0000000000000000000014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000051 /* Assets.xcassets */; };
 		BF0000000000000000000015 /* VPNStatusWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000002 /* VPNStatusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BF0000000000000000000016 /* WorkVPNIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* WorkVPNIcon.swift */; };
+		BF0000000000000000000017 /* WorkVPNIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* WorkVPNIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		FR0000000000000000000021 /* VPNStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatus.swift; sourceTree = "<group>"; };
 		FR0000000000000000000022 /* VPNActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNActivityAttributes.swift; sourceTree = "<group>"; };
 		FR0000000000000000000023 /* VPNStatusStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusStorage.swift; sourceTree = "<group>"; };
+		FR0000000000000000000024 /* WorkVPNIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkVPNIcon.swift; sourceTree = "<group>"; };
 		FR0000000000000000000031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FR0000000000000000000032 /* VPNStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VPNStatus.entitlements; sourceTree = "<group>"; };
 		FR0000000000000000000041 /* VPNStatusWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusWidgetBundle.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 				FR0000000000000000000021 /* VPNStatus.swift */,
 				FR0000000000000000000022 /* VPNActivityAttributes.swift */,
 				FR0000000000000000000023 /* VPNStatusStorage.swift */,
+				FR0000000000000000000024 /* WorkVPNIcon.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -246,6 +250,7 @@
 				BF0000000000000000000005 /* VPNStatus.swift in Sources */,
 				BF0000000000000000000006 /* VPNActivityAttributes.swift in Sources */,
 				BF0000000000000000000007 /* VPNStatusStorage.swift in Sources */,
+				BF0000000000000000000016 /* WorkVPNIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +263,7 @@
 				BF0000000000000000000011 /* VPNStatus.swift in Sources */,
 				BF0000000000000000000012 /* VPNActivityAttributes.swift in Sources */,
 				BF0000000000000000000013 /* VPNStatusStorage.swift in Sources */,
+				BF0000000000000000000017 /* WorkVPNIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

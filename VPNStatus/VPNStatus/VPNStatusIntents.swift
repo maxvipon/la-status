@@ -103,7 +103,7 @@ struct VPNStatusShortcuts: AppShortcutsProvider {
                 "Show Work VPN in \(.applicationName)"
             ],
             shortTitle: "Show Work VPN",
-            systemImageName: "network"
+            systemImageName: "briefcase.fill"
         )
         AppShortcut(
             intent: ShowExternalVPNIntent(),

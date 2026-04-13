@@ -3,3 +3,6 @@
 
 # macOS folder metadata
 .DS_Store
+
+# Local Xcode build output (e.g. -derivedDataPath)
+VPNStatus/build/

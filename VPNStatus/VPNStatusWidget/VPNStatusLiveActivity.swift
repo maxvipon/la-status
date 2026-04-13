@@ -10,7 +10,7 @@ struct VPNStatusLiveActivity: Widget {
                     Text(context.state.displayTitle)
                         .font(.headline)
                 } icon: {
-                    Image(systemName: "network")
+                    statusIcon(for: context.state, size: 24)
                 }
             }
             .padding()
@@ -18,23 +18,44 @@ struct VPNStatusLiveActivity: Widget {
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
-                    Image(systemName: "network")
-                        .symbolRenderingMode(.hierarchical)
+                    statusIcon(for: context.state, size: 28)
                 }
                 DynamicIslandExpandedRegion(.center) {
                     Text(context.state.displayTitle)
                         .font(.headline)
                 }
             } compactLeading: {
-                Image(systemName: "network")
+                statusIcon(for: context.state, size: 18)
             } compactTrailing: {
                 Text(context.state.shortLabel)
                     .font(.caption2.weight(.semibold))
                     .minimumScaleFactor(0.5)
             } minimal: {
-                Image(systemName: "network")
+                statusIcon(for: context.state, size: 14)
             }
             .keylineTint(Color.accentColor)
+        }
+    }
+
+    @ViewBuilder
+    private func statusIcon(for state: VPNActivityAttributes.ContentState, size: CGFloat) -> some View {
+        if state.shortLabel == VPNStatus.work.shortLabel {
+            WorkVPNIcon(size: size)
+        } else {
+            Image(systemName: symbolName(for: state))
+                .font(.system(size: size * 0.85, weight: .medium))
+                .symbolRenderingMode(.hierarchical)
+        }
+    }
+
+    private func symbolName(for state: VPNActivityAttributes.ContentState) -> String {
+        switch state.shortLabel {
+        case VPNStatus.external.shortLabel:
+            return "globe"
+        case VPNStatus.none.shortLabel:
+            return "network.slash"
+        default:
+            return "network"
         }
     }
 }
