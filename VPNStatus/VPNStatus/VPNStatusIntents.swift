@@ -19,7 +19,7 @@ enum VPNModeIntentParam: String, AppEnum {
 
 // MARK: - Individual shortcuts
 
-struct ShowWorkVPNIntent: AppIntent {
+struct ShowWorkVPNIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Show Work VPN"
     static var description = IntentDescription("Updates the Live Activity to show Work VPN.")
 
@@ -33,7 +33,7 @@ struct ShowWorkVPNIntent: AppIntent {
     }
 }
 
-struct ShowExternalVPNIntent: AppIntent {
+struct ShowExternalVPNIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Show External VPN"
     static var description = IntentDescription("Updates the Live Activity to show External VPN.")
 
@@ -47,7 +47,7 @@ struct ShowExternalVPNIntent: AppIntent {
     }
 }
 
-struct ClearVPNIntent: AppIntent {
+struct ClearVPNIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Clear VPN"
     static var description = IntentDescription("Stops the VPN Live Activity.")
 
@@ -63,7 +63,7 @@ struct ClearVPNIntent: AppIntent {
 
 // MARK: - Combined action
 
-struct SetVPNStatusIntent: AppIntent {
+struct SetVPNStatusIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Set VPN Status"
     static var description = IntentDescription("Sets Work, External, or clears the Live Activity.")
 

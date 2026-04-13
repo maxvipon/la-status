@@ -32,6 +32,7 @@ The app registers these actions (see `VPNStatusIntents.swift` and `VPNStatusShor
 | **Clear VPN**         | Ends the Live Activity and saves **No VPN**               |
 | **Set VPN Status**    | Parameter **Mode**: Work / External / None (clear)        |
 
+Shortcuts actions use **`LiveActivityIntent`** (see `VPNStatusIntents.swift`). That is what lets the system start or update the Live Activity when the app is **not** in the foreground. A normal `AppIntent` calling `Activity.request` is not enough for background/Shortcuts-only runs.
 
 ### Adding actions on iPhone
 
