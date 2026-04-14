@@ -23,7 +23,7 @@ struct ShowLiveActivityIntent: LiveActivityIntent {
     func perform() async throws -> some IntentResult {
         try await Task { @MainActor in
             try await LALiveActivityManager.shared.startOrUpdate(
-                status: .work,
+                status: .active,
                 liveActivityLabel: liveActivityLabel,
                 dynamicIslandLabel: dynamicIslandLabel
             )

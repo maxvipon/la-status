@@ -35,25 +35,25 @@ struct ContentView: View {
 
             VStack(spacing: 12) {
                 actionButton(
-                    title: "Show Live Activity: Work"
+                    title: "Show Live Activity: Corp VPN"
                 ) {
                     Task {
                         await apply(
-                            .work,
-                            liveActivityLabel: "Work LA",
+                            .active,
+                            liveActivityLabel: "Corp VPN",
                             dynamicIslandLabel: "Work"
                         )
                     }
                 }
 
                 actionButton(
-                    title: "Show Live Activity: External"
+                    title: "Show Live Activity: External VPN"
                 ) {
                     Task {
                         await apply(
-                            .external,
-                            liveActivityLabel: "External LA",
-                            dynamicIslandLabel: "External"
+                            .active,
+                            liveActivityLabel: "External VPN",
+                            dynamicIslandLabel: "Ext"
                         )
                     }
                 }

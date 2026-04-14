@@ -20,7 +20,7 @@ final class LALiveActivityManager {
 
         LAStatusStorage.save(status)
         let trimmedLiveLabel = liveActivityLabel?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let normalizedLiveLabel = trimmedLiveLabel.isEmpty ? status.displayTitle : trimmedLiveLabel
+        let normalizedLiveLabel = trimmedLiveLabel.isEmpty ? LAStatus.active.rawValue : trimmedLiveLabel
         let trimmedIslandLabel = dynamicIslandLabel?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let normalizedIslandLabel = trimmedIslandLabel.isEmpty
             ? String(normalizedLiveLabel.prefix(8))
