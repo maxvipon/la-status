@@ -16,8 +16,8 @@ struct ShowLiveActivityIntent: LiveActivityIntent {
     var dynamicIslandLabel: String
 
     init() {
-        self.liveActivityLabel = "Work LA"
-        self.dynamicIslandLabel = "Work"
+        self.liveActivityLabel = "Live Activity"
+        self.dynamicIslandLabel = "LA"
     }
 
     func perform() async throws -> some IntentResult {

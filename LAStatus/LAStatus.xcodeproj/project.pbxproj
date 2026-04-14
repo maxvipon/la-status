@@ -24,6 +24,7 @@
 		BF0000000000000000000015 /* LAStatusWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000002 /* LAStatusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BF0000000000000000000016 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* StatusIcon.swift */; };
 		BF0000000000000000000017 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* StatusIcon.swift */; };
+		BF0000000000000000000018 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = VG0000000000000000000001 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		FR0000000000000000000051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FR0000000000000000000052 /* LAStatusWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LAStatusWidgetExtension.entitlements; sourceTree = "<group>"; };
 		FR0000000000000000000053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FR0000000000000000000061 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FR0000000000000000000062 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 				FR0000000000000000000012 /* ContentView.swift */,
 				FR0000000000000000000013 /* LiveActivityManager.swift */,
 				FR0000000000000000000014 /* LAShortcutsIntents.swift */,
+				VG0000000000000000000001 /* Localizable.strings */,
 				FR0000000000000000000031 /* Assets.xcassets */,
 				FR0000000000000000000032 /* LAStatus.entitlements */,
 			);
@@ -206,6 +210,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 				Base,
 			);
 			mainGroup = GP0000000000000000000001;
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0000000000000000000008 /* Assets.xcassets in Resources */,
+				BF0000000000000000000018 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +282,18 @@
 			targetProxy = CP0000000000000000000002 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		VG0000000000000000000001 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FR0000000000000000000061 /* en */,
+				FR0000000000000000000062 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		XC0000000000000000000001 /* Debug */ = {

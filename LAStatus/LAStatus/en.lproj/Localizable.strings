@@ -1,0 +1,20 @@
+"Live Activity Status" = "Live Activity Status";
+"TEST" = "TEST";
+"Live Activity" = "Live Activity";
+"Show Live Activity: Corp VPN" = "Show Live Activity: Corp VPN";
+"Show Live Activity: External VPN" = "Show Live Activity: External VPN";
+"Hide Live Activity" = "Hide Live Activity";
+"How to use with Shortcuts" = "How to use with Shortcuts";
+"Add action **Show Live Activity**." = "Add action **Show Live Activity**.";
+"Set **Live Activity Label**." = "Set **Live Activity Label**.";
+"Set **Dynamic Island Label** (up to 8 chars)." = "Set **Dynamic Island Label** (up to 8 chars).";
+"Use **Hide Live Activity** action to stop the Live Activity." = "Use **Hide Live Activity** action to stop the Live Activity.";
+
+"Show Live Activity" = "Show Live Activity";
+"Sets custom labels for Live Activity and Dynamic Island." = "Sets custom labels for Live Activity and Dynamic Island.";
+"Live Activity Label" = "Live Activity Label";
+"Dynamic Island Label" = "Dynamic Island Label";
+"Stops the Live Activity." = "Stops the Live Activity.";
+"Show Live Activity in %@" = "Show Live Activity in %@";
+"Hide Live Activity in %@" = "Hide Live Activity in %@";
+"Stop Live Activity in %@" = "Stop Live Activity in %@";

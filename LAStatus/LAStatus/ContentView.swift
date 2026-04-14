@@ -41,7 +41,7 @@ struct ContentView: View {
 
             VStack(spacing: 18) {
                 actionButton(
-                    title: "Show Live Activity: Corp VPN",
+                    title: String(localized: "Show Live Activity: Corp VPN"),
                     isSelected: selectedButton == .corp
                 ) {
                     Task {
@@ -55,7 +55,7 @@ struct ContentView: View {
                 }
 
                 actionButton(
-                    title: "Show Live Activity: External VPN",
+                    title: String(localized: "Show Live Activity: External VPN"),
                     isSelected: selectedButton == .external
                 ) {
                     Task {
@@ -69,7 +69,7 @@ struct ContentView: View {
                 }
 
                 actionButton(
-                    title: "Hide Live Activity",
+                    title: String(localized: "Hide Live Activity"),
                     isSelected: selectedButton == .hide,
                     systemImage: "xmark.circle.fill",
                     accentColor: .red
@@ -145,9 +145,9 @@ struct ContentView: View {
                 .textCase(.uppercase)
                 .tracking(0.6)
             VStack(alignment: .leading, spacing: 8) {
-                Text("1. Add action **Show Live Activity**.\n2. Set **Live Activity Label**.\n3. Set **Dynamic Island Label** (up to 8 chars).")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
+                numberedTextRow(number: "1.", text: "Add action **Show Live Activity**.")
+                numberedTextRow(number: "2.", text: "Set **Live Activity Label**.")
+                numberedTextRow(number: "3.", text: "Set **Dynamic Island Label** (up to 8 chars).")
                 Text("Use **Hide Live Activity** action to stop the Live Activity.")
                     .font(.body)
                     .foregroundStyle(.secondary)
@@ -159,6 +159,21 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(Color(.secondarySystemGroupedBackground))
             }
+        }
+    }
+
+    private func numberedTextRow(number: String, text: LocalizedStringKey) -> some View {
+        HStack(alignment: .top, spacing: 10) {
+            Text(number)
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .frame(width: 18, alignment: .leading)
+
+            Text(text)
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 

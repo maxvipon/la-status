@@ -1,0 +1,20 @@
+"Live Activity Status" = "Статус Live Activity";
+"TEST" = "ТЕСТ";
+"Live Activity" = "Live Activity";
+"Show Live Activity: Corp VPN" = "Показать Live Activity: Corp VPN";
+"Show Live Activity: External VPN" = "Показать Live Activity: External VPN";
+"Hide Live Activity" = "Скрыть Live Activity";
+"How to use with Shortcuts" = "Как использовать с Командами";
+"Add action **Show Live Activity**." = "Добавьте действие **Show Live Activity**.";
+"Set **Live Activity Label**." = "Укажите **Подпись Live Activity**.";
+"Set **Dynamic Island Label** (up to 8 chars)." = "Укажите **Подпись Dynamic Island** (до 8 символов).";
+"Use **Hide Live Activity** action to stop the Live Activity." = "Используйте действие **Hide Live Activity**, чтобы скрыть Live Activity.";
+
+"Show Live Activity" = "Show Live Activity";
+"Sets custom labels for Live Activity and Dynamic Island." = "Задает пользовательские подписи для Live Activity и Dynamic Island.";
+"Live Activity Label" = "Подпись Live Activity";
+"Dynamic Island Label" = "Подпись Dynamic Island";
+"Stops the Live Activity." = "Останавливает Live Activity.";
+"Show Live Activity in %@" = "Show Live Activity в %@";
+"Hide Live Activity in %@" = "Hide Live Activity в %@";
+"Stop Live Activity in %@" = "Stop Live Activity в %@";
