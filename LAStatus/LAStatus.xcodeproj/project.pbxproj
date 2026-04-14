@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF0000000000000000000001 /* VPNStatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000011 /* VPNStatusApp.swift */; };
+		BF0000000000000000000001 /* LAStatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000011 /* LAStatusApp.swift */; };
 		BF0000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000012 /* ContentView.swift */; };
 		BF0000000000000000000003 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000013 /* LiveActivityManager.swift */; };
-		BF0000000000000000000004 /* VPNStatusIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000014 /* VPNStatusIntents.swift */; };
-		BF0000000000000000000005 /* VPNStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000021 /* VPNStatus.swift */; };
-		BF0000000000000000000006 /* VPNActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000022 /* VPNActivityAttributes.swift */; };
-		BF0000000000000000000007 /* VPNStatusStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000023 /* VPNStatusStorage.swift */; };
+		BF0000000000000000000004 /* LAShortcutsIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000014 /* LAShortcutsIntents.swift */; };
+		BF0000000000000000000005 /* LAStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000021 /* LAStatus.swift */; };
+		BF0000000000000000000006 /* LAActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000022 /* LAActivityAttributes.swift */; };
+		BF0000000000000000000007 /* LAStatusStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000023 /* LAStatusStorage.swift */; };
 		BF0000000000000000000008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000031 /* Assets.xcassets */; };
-		BF0000000000000000000009 /* VPNStatusWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000041 /* VPNStatusWidgetBundle.swift */; };
-		BF0000000000000000000010 /* VPNStatusLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000042 /* VPNStatusLiveActivity.swift */; };
-		BF0000000000000000000011 /* VPNStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000021 /* VPNStatus.swift */; };
-		BF0000000000000000000012 /* VPNActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000022 /* VPNActivityAttributes.swift */; };
-		BF0000000000000000000013 /* VPNStatusStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000023 /* VPNStatusStorage.swift */; };
+		BF0000000000000000000009 /* LAStatusWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000041 /* LAStatusWidgetBundle.swift */; };
+		BF0000000000000000000010 /* LAStatusLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000042 /* LAStatusLiveActivity.swift */; };
+		BF0000000000000000000011 /* LAStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000021 /* LAStatus.swift */; };
+		BF0000000000000000000012 /* LAActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000022 /* LAActivityAttributes.swift */; };
+		BF0000000000000000000013 /* LAStatusStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000023 /* LAStatusStorage.swift */; };
 		BF0000000000000000000014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000051 /* Assets.xcassets */; };
-		BF0000000000000000000015 /* VPNStatusWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000002 /* VPNStatusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BF0000000000000000000016 /* WorkVPNIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* WorkVPNIcon.swift */; };
-		BF0000000000000000000017 /* WorkVPNIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* WorkVPNIcon.swift */; };
+		BF0000000000000000000015 /* LAStatusWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000002 /* LAStatusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BF0000000000000000000016 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* StatusIcon.swift */; };
+		BF0000000000000000000017 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000024 /* StatusIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 			containerPortal = PJ0000000000000000000001 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = NT0000000000000000000002;
-			remoteInfo = VPNStatusWidgetExtension;
+			remoteInfo = LAStatusWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BF0000000000000000000015 /* VPNStatusWidgetExtension.appex in Embed Foundation Extensions */,
+				BF0000000000000000000015 /* LAStatusWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,22 +51,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FR0000000000000000000001 /* VPNStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR0000000000000000000002 /* VPNStatusWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNStatusWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR0000000000000000000011 /* VPNStatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusApp.swift; sourceTree = "<group>"; };
+		FR0000000000000000000001 /* LAStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR0000000000000000000002 /* LAStatusWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LAStatusWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR0000000000000000000011 /* LAStatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAStatusApp.swift; sourceTree = "<group>"; };
 		FR0000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FR0000000000000000000013 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
-		FR0000000000000000000014 /* VPNStatusIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusIntents.swift; sourceTree = "<group>"; };
-		FR0000000000000000000021 /* VPNStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatus.swift; sourceTree = "<group>"; };
-		FR0000000000000000000022 /* VPNActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNActivityAttributes.swift; sourceTree = "<group>"; };
-		FR0000000000000000000023 /* VPNStatusStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusStorage.swift; sourceTree = "<group>"; };
-		FR0000000000000000000024 /* WorkVPNIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkVPNIcon.swift; sourceTree = "<group>"; };
+		FR0000000000000000000014 /* LAShortcutsIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAShortcutsIntents.swift; sourceTree = "<group>"; };
+		FR0000000000000000000021 /* LAStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAStatus.swift; sourceTree = "<group>"; };
+		FR0000000000000000000022 /* LAActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAActivityAttributes.swift; sourceTree = "<group>"; };
+		FR0000000000000000000023 /* LAStatusStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAStatusStorage.swift; sourceTree = "<group>"; };
+		FR0000000000000000000024 /* StatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIcon.swift; sourceTree = "<group>"; };
 		FR0000000000000000000031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FR0000000000000000000032 /* VPNStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VPNStatus.entitlements; sourceTree = "<group>"; };
-		FR0000000000000000000041 /* VPNStatusWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusWidgetBundle.swift; sourceTree = "<group>"; };
-		FR0000000000000000000042 /* VPNStatusLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusLiveActivity.swift; sourceTree = "<group>"; };
+		FR0000000000000000000032 /* LAStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LAStatus.entitlements; sourceTree = "<group>"; };
+		FR0000000000000000000041 /* LAStatusWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAStatusWidgetBundle.swift; sourceTree = "<group>"; };
+		FR0000000000000000000042 /* LAStatusLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAStatusLiveActivity.swift; sourceTree = "<group>"; };
 		FR0000000000000000000051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FR0000000000000000000052 /* VPNStatusWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VPNStatusWidgetExtension.entitlements; sourceTree = "<group>"; };
+		FR0000000000000000000052 /* LAStatusWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LAStatusWidgetExtension.entitlements; sourceTree = "<group>"; };
 		FR0000000000000000000053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,54 +91,54 @@
 		GP0000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				GP0000000000000000000002 /* VPNStatus */,
+				GP0000000000000000000002 /* LAStatus */,
 				GP0000000000000000000003 /* Shared */,
-				GP0000000000000000000004 /* VPNStatusWidget */,
+				GP0000000000000000000004 /* LAStatusWidget */,
 				GP0000000000000000000005 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		GP0000000000000000000002 /* VPNStatus */ = {
+		GP0000000000000000000002 /* LAStatus */ = {
 			isa = PBXGroup;
 			children = (
-				FR0000000000000000000011 /* VPNStatusApp.swift */,
+				FR0000000000000000000011 /* LAStatusApp.swift */,
 				FR0000000000000000000012 /* ContentView.swift */,
 				FR0000000000000000000013 /* LiveActivityManager.swift */,
-				FR0000000000000000000014 /* VPNStatusIntents.swift */,
+				FR0000000000000000000014 /* LAShortcutsIntents.swift */,
 				FR0000000000000000000031 /* Assets.xcassets */,
-				FR0000000000000000000032 /* VPNStatus.entitlements */,
+				FR0000000000000000000032 /* LAStatus.entitlements */,
 			);
-			path = VPNStatus;
+			path = LAStatus;
 			sourceTree = "<group>";
 		};
 		GP0000000000000000000003 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				FR0000000000000000000021 /* VPNStatus.swift */,
-				FR0000000000000000000022 /* VPNActivityAttributes.swift */,
-				FR0000000000000000000023 /* VPNStatusStorage.swift */,
-				FR0000000000000000000024 /* WorkVPNIcon.swift */,
+				FR0000000000000000000021 /* LAStatus.swift */,
+				FR0000000000000000000022 /* LAActivityAttributes.swift */,
+				FR0000000000000000000023 /* LAStatusStorage.swift */,
+				FR0000000000000000000024 /* StatusIcon.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		GP0000000000000000000004 /* VPNStatusWidget */ = {
+		GP0000000000000000000004 /* LAStatusWidget */ = {
 			isa = PBXGroup;
 			children = (
-				FR0000000000000000000041 /* VPNStatusWidgetBundle.swift */,
-				FR0000000000000000000042 /* VPNStatusLiveActivity.swift */,
+				FR0000000000000000000041 /* LAStatusWidgetBundle.swift */,
+				FR0000000000000000000042 /* LAStatusLiveActivity.swift */,
 				FR0000000000000000000051 /* Assets.xcassets */,
-				FR0000000000000000000052 /* VPNStatusWidgetExtension.entitlements */,
+				FR0000000000000000000052 /* LAStatusWidgetExtension.entitlements */,
 				FR0000000000000000000053 /* Info.plist */,
 			);
-			path = VPNStatusWidget;
+			path = LAStatusWidget;
 			sourceTree = "<group>";
 		};
 		GP0000000000000000000005 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FR0000000000000000000001 /* VPNStatus.app */,
-				FR0000000000000000000002 /* VPNStatusWidgetExtension.appex */,
+				FR0000000000000000000001 /* LAStatus.app */,
+				FR0000000000000000000002 /* LAStatusWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		NT0000000000000000000001 /* VPNStatus */ = {
+		NT0000000000000000000001 /* LAStatus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL0000000000000000000001 /* Build configuration list for PBXNativeTarget "VPNStatus" */;
+			buildConfigurationList = CL0000000000000000000001 /* Build configuration list for PBXNativeTarget "LAStatus" */;
 			buildPhases = (
 				SR0000000000000000000001 /* Sources */,
 				FW0000000000000000000001 /* Frameworks */,
@@ -160,14 +160,14 @@
 			dependencies = (
 				TD0000000000000000000001 /* PBXTargetDependency */,
 			);
-			name = VPNStatus;
-			productName = VPNStatus;
-			productReference = FR0000000000000000000001 /* VPNStatus.app */;
+			name = LAStatus;
+			productName = LAStatus;
+			productReference = FR0000000000000000000001 /* LAStatus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		NT0000000000000000000002 /* VPNStatusWidgetExtension */ = {
+		NT0000000000000000000002 /* LAStatusWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL0000000000000000000002 /* Build configuration list for PBXNativeTarget "VPNStatusWidgetExtension" */;
+			buildConfigurationList = CL0000000000000000000002 /* Build configuration list for PBXNativeTarget "LAStatusWidgetExtension" */;
 			buildPhases = (
 				SR0000000000000000000002 /* Sources */,
 				FW0000000000000000000002 /* Frameworks */,
@@ -177,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = VPNStatusWidgetExtension;
-			productName = VPNStatusWidgetExtension;
-			productReference = FR0000000000000000000002 /* VPNStatusWidgetExtension.appex */;
+			name = LAStatusWidgetExtension;
+			productName = LAStatusWidgetExtension;
+			productReference = FR0000000000000000000002 /* LAStatusWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CL0000000000000000000003 /* Build configuration list for PBXProject "VPNStatus" */;
+			buildConfigurationList = CL0000000000000000000003 /* Build configuration list for PBXProject "LAStatus" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -213,8 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				NT0000000000000000000001 /* VPNStatus */,
-				NT0000000000000000000002 /* VPNStatusWidgetExtension */,
+				NT0000000000000000000001 /* LAStatus */,
+				NT0000000000000000000002 /* LAStatusWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -243,14 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0000000000000000000001 /* VPNStatusApp.swift in Sources */,
+				BF0000000000000000000001 /* LAStatusApp.swift in Sources */,
 				BF0000000000000000000002 /* ContentView.swift in Sources */,
 				BF0000000000000000000003 /* LiveActivityManager.swift in Sources */,
-				BF0000000000000000000004 /* VPNStatusIntents.swift in Sources */,
-				BF0000000000000000000005 /* VPNStatus.swift in Sources */,
-				BF0000000000000000000006 /* VPNActivityAttributes.swift in Sources */,
-				BF0000000000000000000007 /* VPNStatusStorage.swift in Sources */,
-				BF0000000000000000000016 /* WorkVPNIcon.swift in Sources */,
+				BF0000000000000000000004 /* LAShortcutsIntents.swift in Sources */,
+				BF0000000000000000000005 /* LAStatus.swift in Sources */,
+				BF0000000000000000000006 /* LAActivityAttributes.swift in Sources */,
+				BF0000000000000000000007 /* LAStatusStorage.swift in Sources */,
+				BF0000000000000000000016 /* StatusIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,12 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0000000000000000000009 /* VPNStatusWidgetBundle.swift in Sources */,
-				BF0000000000000000000010 /* VPNStatusLiveActivity.swift in Sources */,
-				BF0000000000000000000011 /* VPNStatus.swift in Sources */,
-				BF0000000000000000000012 /* VPNActivityAttributes.swift in Sources */,
-				BF0000000000000000000013 /* VPNStatusStorage.swift in Sources */,
-				BF0000000000000000000017 /* WorkVPNIcon.swift in Sources */,
+				BF0000000000000000000009 /* LAStatusWidgetBundle.swift in Sources */,
+				BF0000000000000000000010 /* LAStatusLiveActivity.swift in Sources */,
+				BF0000000000000000000011 /* LAStatus.swift in Sources */,
+				BF0000000000000000000012 /* LAActivityAttributes.swift in Sources */,
+				BF0000000000000000000013 /* LAStatusStorage.swift in Sources */,
+				BF0000000000000000000017 /* StatusIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 /* Begin PBXTargetDependency section */
 		TD0000000000000000000001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = NT0000000000000000000002 /* VPNStatusWidgetExtension */;
+			target = NT0000000000000000000002 /* LAStatusWidgetExtension */;
 			targetProxy = CP0000000000000000000002 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -336,7 +336,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PARENT_APP_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -395,7 +395,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PARENT_APP_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -407,12 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = VPNStatus/VPNStatus.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LAStatus/LAStatus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "VPN Status";
+				INFOPLIST_KEY_CFBundleDisplayName = "LA Status";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,8 +422,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PARENT_APP_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -437,12 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = VPNStatus/VPNStatus.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LAStatus/LAStatus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "VPN Status";
+				INFOPLIST_KEY_CFBundleDisplayName = "LA Status";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,8 +452,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PARENT_APP_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -466,12 +466,12 @@
 		XC0000000000000000000005 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = VPNStatusWidget/VPNStatusWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LAStatusWidget/LAStatusWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = VPNStatusWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = VPNStatusWidget;
+				INFOPLIST_FILE = LAStatusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LAStatusWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,8 +479,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PARENT_APP_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus.VPNStatusWidget;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lastatus.LAStatus.LAStatusWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -494,12 +494,12 @@
 		XC0000000000000000000006 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = VPNStatusWidget/VPNStatusWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LAStatusWidget/LAStatusWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = VPNStatusWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = VPNStatusWidget;
+				INFOPLIST_FILE = LAStatusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LAStatusWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,8 +507,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PARENT_APP_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpnstatus.VPNStatus.VPNStatusWidget;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.lastatus.LAStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lastatus.LAStatus.LAStatusWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -522,7 +522,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CL0000000000000000000001 /* Build configuration list for PBXNativeTarget "VPNStatus" */ = {
+		CL0000000000000000000001 /* Build configuration list for PBXNativeTarget "LAStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				XC0000000000000000000003 /* Debug */,
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CL0000000000000000000002 /* Build configuration list for PBXNativeTarget "VPNStatusWidgetExtension" */ = {
+		CL0000000000000000000002 /* Build configuration list for PBXNativeTarget "LAStatusWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				XC0000000000000000000005 /* Debug */,
@@ -540,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CL0000000000000000000003 /* Build configuration list for PBXProject "VPNStatus" */ = {
+		CL0000000000000000000003 /* Build configuration list for PBXProject "LAStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				XC0000000000000000000001 /* Debug */,

@@ -1,8 +1,10 @@
 # Xcode per-user workspace state (window layout, breakpoints UI, etc.)
 **/*.xcuserstate
+**/xcuserdata/
+**/*.xcworkspace/xcuserdata/
 
 # macOS folder metadata
 .DS_Store
 
 # Local Xcode build output (e.g. -derivedDataPath)
-VPNStatus/build/
+**/build/

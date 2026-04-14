@@ -19,7 +19,7 @@ struct ContentView: View {
             }
             .scrollIndicators(.hidden)
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("VPN Status")
+            .navigationTitle("LA Status")
             .navigationBarTitleDisplayMode(.large)
         }
     }
@@ -35,24 +35,24 @@ struct ContentView: View {
 
             VStack(spacing: 12) {
                 actionButton(
-                    title: "Set VPN status: Work"
+                    title: "Show Live Activity: Work"
                 ) {
                     Task {
                         await apply(
                             .work,
-                            liveActivityLabel: "Work VPN",
+                            liveActivityLabel: "Work LA",
                             dynamicIslandLabel: "Work"
                         )
                     }
                 }
 
                 actionButton(
-                    title: "Set VPN status: External"
+                    title: "Show Live Activity: External"
                 ) {
                     Task {
                         await apply(
                             .external,
-                            liveActivityLabel: "External VPN",
+                            liveActivityLabel: "External LA",
                             dynamicIslandLabel: "External"
                         )
                     }
@@ -62,7 +62,7 @@ struct ContentView: View {
                     Task { await apply(.none) }
                 } label: {
                     Label {
-                        Text("Clear VPN status")
+                        Text("Hide Live Activity")
                     } icon: {
                         Image(systemName: "xmark.circle.fill")
                             .symbolRenderingMode(.hierarchical)
@@ -84,7 +84,7 @@ struct ContentView: View {
             Label {
                 Text(title)
             } icon: {
-                WorkVPNIcon(size: 22)
+                StatusIcon(size: 22)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 4)
@@ -119,10 +119,10 @@ struct ContentView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text("How to use with Shortcuts")
                 .font(.subheadline.weight(.semibold))
-            Text("1. Add action `Set VPN Status`.\n2. Set `Live Activity Label` (normal length text).\n3. Set `Dynamic Island Label` (short text up to 8 chars).")
+            Text("1. Add action `Show Live Activity`.\n2. Set `Live Activity Label` (normal length text).\n3. Set `Dynamic Island Label` (short text up to 8 chars).")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
-            Text("Use `Clear VPN Status` to stop the Live Activity.")
+            Text("Use `Hide Live Activity` to stop the Live Activity.")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
         }
@@ -135,7 +135,7 @@ struct ContentView: View {
     }
 
     private var footerNote: some View {
-        Text("Status here and in Shortcuts is manual only — it does not reflect the system VPN connection.")
+        Text("Status here and in Shortcuts is manual only — it does not reflect the system connection.")
             .font(.footnote)
             .foregroundStyle(.tertiary)
             .multilineTextAlignment(.center)
@@ -144,16 +144,16 @@ struct ContentView: View {
     }
 
     private func apply(
-        _ newStatus: VPNStatus,
+        _ newStatus: LAStatus,
         liveActivityLabel: String? = nil,
         dynamicIslandLabel: String? = nil
     ) async {
         message = nil
         do {
             if newStatus == .none {
-                try await LiveActivityManager.shared.stop()
+                try await LALiveActivityManager.shared.stop()
             } else {
-                try await LiveActivityManager.shared.startOrUpdate(
+                try await LALiveActivityManager.shared.startOrUpdate(
                     status: newStatus,
                     liveActivityLabel: liveActivityLabel,
                     dynamicIslandLabel: dynamicIslandLabel

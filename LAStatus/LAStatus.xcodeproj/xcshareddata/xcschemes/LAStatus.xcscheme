@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "NT0000000000000000000001"
-               BuildableName = "VPNStatus.app"
-               BlueprintName = "VPNStatus"
-               ReferencedContainer = "container:VPNStatus.xcodeproj">
+               BuildableName = "LAStatus.app"
+               BlueprintName = "LAStatus"
+               ReferencedContainer = "container:LAStatus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT0000000000000000000001"
-            BuildableName = "VPNStatus.app"
-            BlueprintName = "VPNStatus"
-            ReferencedContainer = "container:VPNStatus.xcodeproj">
+            BuildableName = "LAStatus.app"
+            BlueprintName = "LAStatus"
+            ReferencedContainer = "container:LAStatus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT0000000000000000000001"
-            BuildableName = "VPNStatus.app"
-            BlueprintName = "VPNStatus"
-            ReferencedContainer = "container:VPNStatus.xcodeproj">
+            BuildableName = "LAStatus.app"
+            BlueprintName = "LAStatus"
+            ReferencedContainer = "container:LAStatus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

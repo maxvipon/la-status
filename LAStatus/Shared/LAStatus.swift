@@ -1,10 +1,10 @@
 import Foundation
 
-/// Manually selected VPN mode (not tied to system VPN state).
-enum VPNStatus: String, CaseIterable, Codable, Sendable {
-    case work = "Work VPN"
-    case external = "External VPN"
-    case none = "No VPN"
+/// Manually selected LA mode (not tied to system state).
+enum LAStatus: String, CaseIterable, Codable, Sendable {
+    case work = "Work LA"
+    case external = "External LA"
+    case none = "No LA"
 
     var displayTitle: String { rawValue }
 

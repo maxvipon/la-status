@@ -2,11 +2,11 @@ import ActivityKit
 import SwiftUI
 import WidgetKit
 
-struct VPNStatusLiveActivity: Widget {
+struct LAStatusLiveActivity: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: VPNActivityAttributes.self) { context in
+        ActivityConfiguration(for: LAActivityAttributes.self) { context in
             HStack(spacing: 8) {
-                WorkVPNIcon(size: 22)
+                StatusIcon(size: 22)
                 Text(context.state.liveActivityLabel)
                     .font(.headline)
             }
@@ -15,20 +15,20 @@ struct VPNStatusLiveActivity: Widget {
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
-                    WorkVPNIcon(size: 28)
+                    StatusIcon(size: 28)
                 }
                 DynamicIslandExpandedRegion(.center) {
                     Text(context.state.liveActivityLabel)
                         .font(.subheadline.weight(.semibold))
                 }
             } compactLeading: {
-                WorkVPNIcon(size: 18)
+                StatusIcon(size: 18)
             } compactTrailing: {
                 Text(context.state.dynamicIslandLabel)
                     .font(.caption2.weight(.semibold))
                     .minimumScaleFactor(0.5)
             } minimal: {
-                WorkVPNIcon(size: 14)
+                StatusIcon(size: 14)
             }
             .keylineTint(Color.accentColor)
         }

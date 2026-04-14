@@ -3,8 +3,8 @@ import Foundation
 
 // MARK: - Actions
 
-struct SetVPNStatusIntent: LiveActivityIntent {
-    static var title: LocalizedStringResource = "Set VPN Status"
+struct ShowLiveActivityIntent: LiveActivityIntent {
+    static var title: LocalizedStringResource = "Show Live Activity"
     static var description = IntentDescription("Sets custom labels for Live Activity and Dynamic Island.")
 
     static var openAppWhenRun: Bool = false
@@ -16,13 +16,13 @@ struct SetVPNStatusIntent: LiveActivityIntent {
     var dynamicIslandLabel: String
 
     init() {
-        self.liveActivityLabel = "Work VPN"
+        self.liveActivityLabel = "Work LA"
         self.dynamicIslandLabel = "Work"
     }
 
     func perform() async throws -> some IntentResult {
         try await Task { @MainActor in
-            try await LiveActivityManager.shared.startOrUpdate(
+            try await LALiveActivityManager.shared.startOrUpdate(
                 status: .work,
                 liveActivityLabel: liveActivityLabel,
                 dynamicIslandLabel: dynamicIslandLabel
@@ -32,15 +32,15 @@ struct SetVPNStatusIntent: LiveActivityIntent {
     }
 }
 
-struct ClearVPNIntent: LiveActivityIntent {
-    static var title: LocalizedStringResource = "Clear VPN Status"
-    static var description = IntentDescription("Stops the VPN Live Activity.")
+struct HideLiveActivityIntent: LiveActivityIntent {
+    static var title: LocalizedStringResource = "Hide Live Activity"
+    static var description = IntentDescription("Stops the Live Activity.")
 
     static var openAppWhenRun: Bool = false
 
     func perform() async throws -> some IntentResult {
         try await Task { @MainActor in
-            try await LiveActivityManager.shared.stop()
+            try await LALiveActivityManager.shared.stop()
         }.value
         return .result()
     }
@@ -48,24 +48,24 @@ struct ClearVPNIntent: LiveActivityIntent {
 
 // MARK: - App Shortcuts (discoverability in Shortcuts app)
 
-struct VPNStatusShortcuts: AppShortcutsProvider {
+struct LAStatusShortcuts: AppShortcutsProvider {
     @AppShortcutsBuilder
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
-            intent: SetVPNStatusIntent(),
+            intent: ShowLiveActivityIntent(),
             phrases: [
-                "Set VPN status in \(.applicationName)"
+                "Show Live Activity in \(.applicationName)"
             ],
-            shortTitle: "Set VPN Status",
+            shortTitle: "Show Live Activity",
             systemImageName: "network"
         )
         AppShortcut(
-            intent: ClearVPNIntent(),
+            intent: HideLiveActivityIntent(),
             phrases: [
-                "Clear VPN status in \(.applicationName)",
-                "Stop VPN status in \(.applicationName)"
+                "Hide Live Activity in \(.applicationName)",
+                "Stop Live Activity in \(.applicationName)"
             ],
-            shortTitle: "Clear VPN Status",
+            shortTitle: "Hide Live Activity",
             systemImageName: "xmark.circle"
         )
     }

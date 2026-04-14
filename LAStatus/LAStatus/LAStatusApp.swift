@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct VPNStatusApp: App {
+struct LAStatusApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
