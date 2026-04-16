@@ -12,8 +12,23 @@
 
 "Show Live Activity" = "Show Live Activity";
 "Sets custom labels for Live Activity and Dynamic Island." = "Задает пользовательские подписи для Live Activity и Dynamic Island.";
-"Live Activity Label" = "Подпись Live Activity";
-"Dynamic Island Label" = "Подпись Dynamic Island";
+"Live Activity Label" = "Текст Live Activity";
+"Dynamic Island Label" = "Текст Dynamic Island";
+"Icon & Text Color" = "Цвет";
+"Any text" = "Любой текст";
+"up to 8 symbols" = "до 8 символов";
+"Accent" = "Акцент";
+"Accent color" = "Цвет акцента";
+"White" = "Белый";
+"Black" = "Черный";
+"Gray" = "Серый";
+"Red" = "Красный";
+"Green" = "Зеленый";
+"Blue" = "Синий";
+"Orange" = "Оранжевый";
+"Purple" = "Фиолетовый";
+"Pink" = "Розовый";
+
 "Stops the Live Activity." = "Останавливает Live Activity.";
 "Show Live Activity in %@" = "Show Live Activity в %@";
 "Hide Live Activity in %@" = "Hide Live Activity в %@";

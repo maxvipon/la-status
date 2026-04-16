@@ -12,8 +12,23 @@
 
 "Show Live Activity" = "Show Live Activity";
 "Sets custom labels for Live Activity and Dynamic Island." = "Sets custom labels for Live Activity and Dynamic Island.";
-"Live Activity Label" = "Live Activity Label";
+"Live Activity Label" = "Live Activity Text";
 "Dynamic Island Label" = "Dynamic Island Label";
+"Icon & Text Color" = "Color";
+"Any text" = "Any text";
+"up to 8 symbols" = "up to 8 symbols";
+"Accent" = "Accent";
+"Accent color" = "Accent color";
+"White" = "White";
+"Black" = "Black";
+"Gray" = "Gray";
+"Red" = "Red";
+"Green" = "Green";
+"Blue" = "Blue";
+"Orange" = "Orange";
+"Purple" = "Purple";
+"Pink" = "Pink";
+
 "Stops the Live Activity." = "Stops the Live Activity.";
 "Show Live Activity in %@" = "Show Live Activity in %@";
 "Hide Live Activity in %@" = "Hide Live Activity in %@";

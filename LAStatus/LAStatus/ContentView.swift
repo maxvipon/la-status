@@ -148,6 +148,7 @@ struct ContentView: View {
                 numberedTextRow(number: "1.", text: "Add action **Show Live Activity**.")
                 numberedTextRow(number: "2.", text: "Set **Live Activity Label**.")
                 numberedTextRow(number: "3.", text: "Set **Dynamic Island Label** (up to 8 chars).")
+                numberedTextRow(number: "4.", text: "Optional: set **icon & text color**.")
                 Text("Use **Hide Live Activity** action to stop the Live Activity.")
                     .font(.body)
                     .foregroundStyle(.secondary)

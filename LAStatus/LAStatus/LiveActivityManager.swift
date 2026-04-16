@@ -11,7 +11,8 @@ final class LALiveActivityManager {
     func startOrUpdate(
         status: LAStatus,
         liveActivityLabel: String? = nil,
-        dynamicIslandLabel: String? = nil
+        dynamicIslandLabel: String? = nil,
+        iconTextColor: LAStatusColor = .white
     ) async throws {
         guard status != .none else {
             try await stop()
@@ -28,7 +29,8 @@ final class LALiveActivityManager {
 
         let state = LAActivityAttributes.ContentState(
             liveActivityLabel: normalizedLiveLabel,
-            dynamicIslandLabel: normalizedIslandLabel
+            dynamicIslandLabel: normalizedIslandLabel,
+            iconTextColor: iconTextColor
         )
         let content = ActivityContent(state: state, staleDate: nil)
 

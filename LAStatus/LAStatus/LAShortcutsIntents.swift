@@ -1,11 +1,61 @@
 import AppIntents
 import Foundation
 
+enum LAStatusColorChoice: String, AppEnum, Codable, Hashable, Sendable {
+    case accent
+    case white
+    case black
+    case gray
+    case red
+    case green
+    case blue
+    case orange
+    case purple
+    case pink
+
+    static var typeDisplayRepresentation: TypeDisplayRepresentation {
+        TypeDisplayRepresentation(name: LocalizedStringResource("Icon & Text Color"))
+    }
+
+    static let caseDisplayRepresentations: [LAStatusColorChoice: DisplayRepresentation] = [
+        .accent: DisplayRepresentation(
+            title: LocalizedStringResource("Accent")
+        ),
+        .white: DisplayRepresentation(
+            title: LocalizedStringResource("White")
+        ),
+        .black: DisplayRepresentation(
+            title: LocalizedStringResource("Black")
+        ),
+        .gray: DisplayRepresentation(
+            title: LocalizedStringResource("Gray")
+        ),
+        .red: DisplayRepresentation(
+            title: LocalizedStringResource("Red")
+        ),
+        .green: DisplayRepresentation(
+            title: LocalizedStringResource("Green")
+        ),
+        .blue: DisplayRepresentation(
+            title: LocalizedStringResource("Blue")
+        ),
+        .orange: DisplayRepresentation(
+            title: LocalizedStringResource("Orange")
+        ),
+        .purple: DisplayRepresentation(
+            title: LocalizedStringResource("Purple")
+        ),
+        .pink: DisplayRepresentation(
+            title: LocalizedStringResource("Pink")
+        )
+    ]
+}
+
 // MARK: - Actions
 
 struct ShowLiveActivityIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Show Live Activity"
-    static var description = IntentDescription("Sets custom labels for Live Activity and Dynamic Island.")
+    static var description = IntentDescription("Sets labels and styling colors for Live Activity and Dynamic Island.")
 
     static var openAppWhenRun: Bool = false
 
@@ -15,9 +65,13 @@ struct ShowLiveActivityIntent: LiveActivityIntent {
     @Parameter(title: "Dynamic Island Label")
     var dynamicIslandLabel: String
 
+    @Parameter(title: "Icon & Text Color", default: .white)
+    var iconTextColor: LAStatusColorChoice
+
     init() {
-        self.liveActivityLabel = "Live Activity"
+        self.liveActivityLabel = "Live Activity Text"
         self.dynamicIslandLabel = "LA"
+        self.iconTextColor = .white
     }
 
     func perform() async throws -> some IntentResult {
@@ -25,7 +79,8 @@ struct ShowLiveActivityIntent: LiveActivityIntent {
             try await LALiveActivityManager.shared.startOrUpdate(
                 status: .active,
                 liveActivityLabel: liveActivityLabel,
-                dynamicIslandLabel: dynamicIslandLabel
+                dynamicIslandLabel: dynamicIslandLabel,
+                iconTextColor: LAStatusColor(rawValue: iconTextColor.rawValue) ?? .white
             )
         }.value
         return .result()
