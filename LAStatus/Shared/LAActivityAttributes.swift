@@ -18,6 +18,7 @@ struct LAActivityAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable, Sendable {
         var liveActivityLabel: String
         var dynamicIslandLabel: String
+        var iconSymbolName: String
         var iconTextColor: LAStatusColor
     }
 }

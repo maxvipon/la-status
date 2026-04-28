@@ -12,8 +12,10 @@
 
 "Show Live Activity" = "Show Live Activity";
 "Sets custom labels for Live Activity and Dynamic Island." = "Sets custom labels for Live Activity and Dynamic Island.";
-"Live Activity Label" = "Live Activity Text";
+"Sets the title and optional appearance for Live Activity and Dynamic Island." = "Sets the title and optional appearance for Live Activity and Dynamic Island.";
+"Title" = "Title";
 "Dynamic Island Label" = "Dynamic Island Label";
+"SF Symbol Name" = "SF Symbol Name";
 "Icon & Text Color" = "Color";
 "Any text" = "Any text";
 "up to 8 symbols" = "up to 8 symbols";

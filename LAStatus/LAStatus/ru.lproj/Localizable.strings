@@ -12,8 +12,10 @@
 
 "Show Live Activity" = "Show Live Activity";
 "Sets custom labels for Live Activity and Dynamic Island." = "Задает пользовательские подписи для Live Activity и Dynamic Island.";
-"Live Activity Label" = "Текст Live Activity";
+"Sets the title and optional appearance for Live Activity and Dynamic Island." = "Задает заголовок и дополнительные настройки внешнего вида для Live Activity и Dynamic Island.";
+"Title" = "Заголовок";
 "Dynamic Island Label" = "Текст Dynamic Island";
+"SF Symbol Name" = "SF Symbol Name";
 "Icon & Text Color" = "Цвет";
 "Any text" = "Любой текст";
 "up to 8 symbols" = "до 8 символов";

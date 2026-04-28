@@ -55,22 +55,34 @@ enum LAStatusColorChoice: String, AppEnum, Codable, Hashable, Sendable {
 
 struct ShowLiveActivityIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Show Live Activity"
-    static var description = IntentDescription("Sets labels and styling colors for Live Activity and Dynamic Island.")
+    static var description = IntentDescription("Sets the title and optional appearance for Live Activity and Dynamic Island.")
 
     static var openAppWhenRun: Bool = false
 
-    @Parameter(title: "Live Activity Label")
+    @Parameter(title: "Title")
     var liveActivityLabel: String
 
     @Parameter(title: "Dynamic Island Label")
-    var dynamicIslandLabel: String
+    var dynamicIslandLabel: String?
+
+    @Parameter(title: "SF Symbol Name", default: "network")
+    var sfSymbolName: String
 
     @Parameter(title: "Icon & Text Color", default: .white)
     var iconTextColor: LAStatusColorChoice
 
+    static var parameterSummary: some ParameterSummary {
+        Summary("Show Live Activity with \(\.$liveActivityLabel)") {
+            \.$sfSymbolName
+            \.$dynamicIslandLabel
+            \.$iconTextColor
+        }
+    }
+
     init() {
         self.liveActivityLabel = "Live Activity Text"
-        self.dynamicIslandLabel = "LA"
+        self.dynamicIslandLabel = nil
+        self.sfSymbolName = "network"
         self.iconTextColor = .white
     }
 
@@ -80,6 +92,7 @@ struct ShowLiveActivityIntent: LiveActivityIntent {
                 status: .active,
                 liveActivityLabel: liveActivityLabel,
                 dynamicIslandLabel: dynamicIslandLabel,
+                iconSymbolName: sfSymbolName,
                 iconTextColor: LAStatusColor(rawValue: iconTextColor.rawValue) ?? .white
             )
         }.value
