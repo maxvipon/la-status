@@ -1,8 +1,10 @@
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
     @State private var message: String?
     @State private var selectedButton: SelectedButton?
+    @State private var isApplying = false
 
     private enum SelectedButton {
         case corp
@@ -42,13 +44,17 @@ struct ContentView: View {
             VStack(spacing: 18) {
                 actionButton(
                     title: String(localized: "Show Live Activity: Corp VPN"),
-                    isSelected: selectedButton == .corp
+                    isSelected: selectedButton == .corp,
+                    systemImage: "key.shield.fill",
+                    accentColor: .green
                 ) {
                     Task {
                         await apply(
                             .active,
-                            liveActivityLabel: "Corp VPN",
-                            dynamicIslandLabel: "Work",
+                            liveActivityTitle: "Corporate VPN",
+                            dynamicIslandLabel: "Corp",
+                            dynamicIslandIcon: "key.shield.fill",
+                            elementsColor: .green,
                             selected: .corp
                         )
                     }
@@ -56,13 +62,17 @@ struct ContentView: View {
 
                 actionButton(
                     title: String(localized: "Show Live Activity: External VPN"),
-                    isSelected: selectedButton == .external
+                    isSelected: selectedButton == .external,
+                    systemImage: "network",
+                    accentColor: .blue
                 ) {
                     Task {
                         await apply(
                             .active,
-                            liveActivityLabel: "External VPN",
+                            liveActivityTitle: "External VPN",
                             dynamicIslandLabel: "Ext",
+                            dynamicIslandIcon: "network",
+                            elementsColor: .blue,
                             selected: .external
                         )
                     }
@@ -85,7 +95,7 @@ struct ContentView: View {
     private func actionButton(
         title: String,
         isSelected: Bool,
-        systemImage: String = "network",
+        systemImage: String,
         accentColor: Color = .blue,
         action: @escaping () -> Void
     ) -> some View {
@@ -99,8 +109,9 @@ struct ContentView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.horizontal, 18)
-            .padding(.vertical, 18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+            .padding(18)
             .foregroundStyle(isSelected ? Color.white : accentColor)
             .background(
                 RoundedRectangle(cornerRadius: 32, style: .continuous)
@@ -112,7 +123,8 @@ struct ContentView: View {
             )
         }
         .buttonStyle(PressInButtonStyle())
-        .animation(.easeInOut(duration: 0.18), value: isSelected)
+        .animation(.easeInOut(duration: 0.25), value: isSelected)
+        .disabled(isApplying)
     }
 
     private func errorCallout(_ text: String) -> some View {
@@ -146,9 +158,10 @@ struct ContentView: View {
                 .tracking(0.6)
             VStack(alignment: .leading, spacing: 8) {
                 numberedTextRow(number: "1.", text: "Add action **Show Live Activity**.")
-                numberedTextRow(number: "2.", text: "Set **Live Activity Label**.")
-                numberedTextRow(number: "3.", text: "Set **Dynamic Island Label** (up to 8 chars).")
-                numberedTextRow(number: "4.", text: "Optional: set **icon & text color**.")
+                numberedTextRow(number: "2.", text: "Set Live Activity **Title**.")
+                numberedTextRow(number: "3.", text: "Set Dynamic Island **Label**.")
+                numberedTextRow(number: "4.", text: "Optional: set Dynamic Island **Icon name** from **[SF Symbols](https://developer.apple.com/sf-symbols/)** (default: `network`).")
+                numberedTextRow(number: "5.", text: "Optional: set **Color** (default: **White**).")
                 Text("Use **Hide Live Activity** action to stop the Live Activity.")
                     .font(.body)
                     .foregroundStyle(.secondary)
@@ -178,12 +191,18 @@ struct ContentView: View {
         }
     }
 
+    @MainActor
     private func apply(
         _ newStatus: LAStatus,
-        liveActivityLabel: String? = nil,
+        liveActivityTitle: String? = nil,
         dynamicIslandLabel: String? = nil,
+        dynamicIslandIcon: String? = nil,
+        elementsColor: LAStatusColor = .white,
         selected: SelectedButton? = nil
     ) async {
+        guard !isApplying else { return }
+        isApplying = true
+        defer { isApplying = false }
         message = nil
         do {
             if newStatus == .none {
@@ -191,8 +210,10 @@ struct ContentView: View {
             } else {
                 try await LALiveActivityManager.shared.startOrUpdate(
                     status: newStatus,
-                    liveActivityLabel: liveActivityLabel,
-                    dynamicIslandLabel: dynamicIslandLabel
+                    liveActivityTitle: liveActivityTitle,
+                    dynamicIslandLabel: dynamicIslandLabel,
+                    dynamicIslandIcon: dynamicIslandIcon,
+                    elementsColor: elementsColor
                 )
             }
             if let selected {

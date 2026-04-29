@@ -1,26 +1,25 @@
 "Live Activity Status" = "Live Activity Status";
 "TEST" = "TEST";
-"Live Activity" = "Live Activity";
 "Show Live Activity: Corp VPN" = "Show Live Activity: Corp VPN";
 "Show Live Activity: External VPN" = "Show Live Activity: External VPN";
 "Hide Live Activity" = "Hide Live Activity";
+
 "How to use with Shortcuts" = "How to use with Shortcuts";
 "Add action **Show Live Activity**." = "Add action **Show Live Activity**.";
-"Set **Live Activity Label**." = "Set **Live Activity Label**.";
-"Set **Dynamic Island Label** (up to 8 chars)." = "Set **Dynamic Island Label** (up to 8 chars).";
+"Set Live Activity **Title**." = "Set Live Activity **Title**.";
+"Set Dynamic Island **Label**." = "Set Dynamic Island **Label**.";
+"Optional: set Dynamic Island **Icon name** from **[SF Symbols](https://developer.apple.com/sf-symbols/)** (default: `network`)." = "Optional: set Dynamic Island **Icon name** from **[SF Symbols](https://developer.apple.com/sf-symbols/)** (default: `network`).";
+"Optional: set **Color** (default: **White**)." = "Optional: set **Color** (default: **White**).";
 "Use **Hide Live Activity** action to stop the Live Activity." = "Use **Hide Live Activity** action to stop the Live Activity.";
 
 "Show Live Activity" = "Show Live Activity";
-"Sets custom labels for Live Activity and Dynamic Island." = "Sets custom labels for Live Activity and Dynamic Island.";
 "Sets the title and optional appearance for Live Activity and Dynamic Island." = "Sets the title and optional appearance for Live Activity and Dynamic Island.";
+"Live Activity Title" = "Live Activity Title";
 "Title" = "Title";
 "Dynamic Island Label" = "Dynamic Island Label";
-"SF Symbol Name" = "SF Symbol Name";
-"Icon & Text Color" = "Color";
-"Any text" = "Any text";
-"up to 8 symbols" = "up to 8 symbols";
+"Dynamic Island Icon (SF Symbol)" = "Dynamic Island Icon (SF Symbol)";
+"Color" = "Color";
 "Accent" = "Accent";
-"Accent color" = "Accent color";
 "White" = "White";
 "Black" = "Black";
 "Gray" = "Gray";
@@ -32,6 +31,7 @@
 "Pink" = "Pink";
 
 "Stops the Live Activity." = "Stops the Live Activity.";
+"Show Live Activity with %@" = "Show Live Activity with %@";
 "Show Live Activity in %@" = "Show Live Activity in %@";
 "Hide Live Activity in %@" = "Hide Live Activity in %@";
 "Stop Live Activity in %@" = "Stop Live Activity in %@";

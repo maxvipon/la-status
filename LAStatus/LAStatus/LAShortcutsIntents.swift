@@ -14,7 +14,7 @@ enum LAStatusColorChoice: String, AppEnum, Codable, Hashable, Sendable {
     case pink
 
     static var typeDisplayRepresentation: TypeDisplayRepresentation {
-        TypeDisplayRepresentation(name: LocalizedStringResource("Icon & Text Color"))
+        TypeDisplayRepresentation(name: LocalizedStringResource("Color"))
     }
 
     static let caseDisplayRepresentations: [LAStatusColorChoice: DisplayRepresentation] = [
@@ -51,6 +51,23 @@ enum LAStatusColorChoice: String, AppEnum, Codable, Hashable, Sendable {
     ]
 }
 
+private extension LAStatusColorChoice {
+    var laStatusColor: LAStatusColor {
+        switch self {
+        case .accent: return .accent
+        case .white: return .white
+        case .black: return .black
+        case .gray: return .gray
+        case .red: return .red
+        case .green: return .green
+        case .blue: return .blue
+        case .orange: return .orange
+        case .purple: return .purple
+        case .pink: return .pink
+        }
+    }
+}
+
 // MARK: - Actions
 
 struct ShowLiveActivityIntent: LiveActivityIntent {
@@ -60,40 +77,40 @@ struct ShowLiveActivityIntent: LiveActivityIntent {
     static var openAppWhenRun: Bool = false
 
     @Parameter(title: "Title")
-    var liveActivityLabel: String
+    var liveActivityTitle: String
 
     @Parameter(title: "Dynamic Island Label")
     var dynamicIslandLabel: String?
 
-    @Parameter(title: "SF Symbol Name", default: "network")
-    var sfSymbolName: String
+    @Parameter(title: "Dynamic Island Icon (SF Symbol)", default: "network")
+    var dynamicIslandIcon: String
 
-    @Parameter(title: "Icon & Text Color", default: .white)
-    var iconTextColor: LAStatusColorChoice
+    @Parameter(title: "Color", default: .white)
+    var elementsColor: LAStatusColorChoice
 
     static var parameterSummary: some ParameterSummary {
-        Summary("Show Live Activity with \(\.$liveActivityLabel)") {
-            \.$sfSymbolName
+        Summary("Show Live Activity with \(\.$liveActivityTitle)") {
+            \.$dynamicIslandIcon
             \.$dynamicIslandLabel
-            \.$iconTextColor
+            \.$elementsColor
         }
     }
 
     init() {
-        self.liveActivityLabel = "Live Activity Text"
+        self.liveActivityTitle = String(localized: "Live Activity Title")
         self.dynamicIslandLabel = nil
-        self.sfSymbolName = "network"
-        self.iconTextColor = .white
+        self.dynamicIslandIcon = "network"
+        self.elementsColor = .white
     }
 
     func perform() async throws -> some IntentResult {
         try await Task { @MainActor in
             try await LALiveActivityManager.shared.startOrUpdate(
                 status: .active,
-                liveActivityLabel: liveActivityLabel,
+                liveActivityTitle: liveActivityTitle,
                 dynamicIslandLabel: dynamicIslandLabel,
-                iconSymbolName: sfSymbolName,
-                iconTextColor: LAStatusColor(rawValue: iconTextColor.rawValue) ?? .white
+                dynamicIslandIcon: dynamicIslandIcon,
+                elementsColor: elementsColor.laStatusColor
             )
         }.value
         return .result()
@@ -124,8 +141,8 @@ struct LAStatusShortcuts: AppShortcutsProvider {
             phrases: [
                 "Show Live Activity in \(.applicationName)"
             ],
-            shortTitle: "Show Live Activity",
-            systemImageName: "network"
+            shortTitle: LocalizedStringResource("Show Live Activity"),
+            systemImageName: "bolt.horizontal.circle"
         )
         AppShortcut(
             intent: HideLiveActivityIntent(),
@@ -133,7 +150,7 @@ struct LAStatusShortcuts: AppShortcutsProvider {
                 "Hide Live Activity in \(.applicationName)",
                 "Stop Live Activity in \(.applicationName)"
             ],
-            shortTitle: "Hide Live Activity",
+            shortTitle: LocalizedStringResource("Hide Live Activity"),
             systemImageName: "xmark.circle"
         )
     }

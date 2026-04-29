@@ -4,12 +4,18 @@ import SwiftUI
 struct StatusIcon: View {
     var size: CGFloat = 24
     var systemName: String = "network"
+    var accessibilityLabel: String?
 
     var body: some View {
-        Image(systemName: systemName)
+        let icon = Image(systemName: systemName)
             .font(.system(size: size * 0.85, weight: .medium))
             .symbolRenderingMode(.hierarchical)
             .frame(width: size, height: size)
-            .accessibilityLabel("LA")
+
+        if let accessibilityLabel, !accessibilityLabel.isEmpty {
+            icon.accessibilityLabel(accessibilityLabel)
+        } else {
+            icon.accessibilityHidden(true)
+        }
     }
 }

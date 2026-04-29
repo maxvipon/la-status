@@ -37,6 +37,15 @@ The app provides two Shortcuts actions:
 - **Show Live Activity** - start or update activity with both labels
 - **Hide Live Activity** - end activity
 
+## How to use with Shortcuts
+
+1. Add action **Show Live Activity**.
+2. Set Live Activity **Title**.
+3. Set Dynamic Island **Label**.
+4. Optional: set Dynamic Island Icon (SF Symbol) from [SF Symbols](https://developer.apple.com/sf-symbols/) and **Color**.
+5. Run the shortcut.
+6. When you’re done, use **Hide Live Activity**.
+
 ## Project structure
 
 - `LAStatus` - app target

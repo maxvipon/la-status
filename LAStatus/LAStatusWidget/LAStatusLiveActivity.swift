@@ -6,8 +6,6 @@ struct LAStatusLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: LAActivityAttributes.self) { context in
             HStack(spacing: 8) {
-                // StatusIcon(size: 22, systemName: context.state.iconSymbolName)
-                //     .foregroundStyle(Self.uiColor(context.state.iconTextColor))
                 Text(context.state.liveActivityLabel)
                     .font(.headline)
                     .foregroundStyle(Self.uiColor(context.state.iconTextColor))
@@ -16,18 +14,17 @@ struct LAStatusLiveActivity: Widget {
             .activityBackgroundTint(Color.black.opacity(0.35))
         } dynamicIsland: { context in
             DynamicIsland {
-                // DynamicIslandExpandedRegion(.leading) {
-                //     StatusIcon(size: 36, systemName: context.state.iconSymbolName)
-                //         .frame(maxHeight: .infinity, alignment: .center)
-                //         .foregroundStyle(Self.uiColor(context.state.iconTextColor))
-                // }
                 DynamicIslandExpandedRegion(.center) {
                     Text(context.state.liveActivityLabel)
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Self.uiColor(context.state.iconTextColor))
                 }
             } compactLeading: {
-                StatusIcon(size: 18, systemName: context.state.iconSymbolName)
+                StatusIcon(
+                    size: 18,
+                    systemName: context.state.iconSymbolName,
+                    accessibilityLabel: context.state.liveActivityLabel
+                )
                     .foregroundStyle(Self.uiColor(context.state.iconTextColor))
             } compactTrailing: {
                 Text(context.state.dynamicIslandLabel)
@@ -35,7 +32,11 @@ struct LAStatusLiveActivity: Widget {
                     .minimumScaleFactor(0.5)
                     .foregroundStyle(Self.uiColor(context.state.iconTextColor))
             } minimal: {
-                StatusIcon(size: 18, systemName: context.state.iconSymbolName)
+                StatusIcon(
+                    size: 18,
+                    systemName: context.state.iconSymbolName,
+                    accessibilityLabel: context.state.liveActivityLabel
+                )
                     .foregroundStyle(Self.uiColor(context.state.iconTextColor))
             }
             .keylineTint(Self.uiColor(context.state.iconTextColor))

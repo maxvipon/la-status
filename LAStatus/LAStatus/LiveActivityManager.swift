@@ -11,10 +11,10 @@ final class LALiveActivityManager {
 
     func startOrUpdate(
         status: LAStatus,
-        liveActivityLabel: String? = nil,
+        liveActivityTitle: String? = nil,
         dynamicIslandLabel: String? = nil,
-        iconSymbolName: String? = nil,
-        iconTextColor: LAStatusColor = .white
+        dynamicIslandIcon: String? = nil,
+        elementsColor: LAStatusColor = .white
     ) async throws {
         guard status != .none else {
             try await stop()
@@ -22,20 +22,20 @@ final class LALiveActivityManager {
         }
 
         LAStatusStorage.save(status)
-        let trimmedLiveLabel = liveActivityLabel?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let trimmedLiveLabel = liveActivityTitle?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let normalizedLiveLabel = trimmedLiveLabel.isEmpty ? LAStatus.active.rawValue : trimmedLiveLabel
         let trimmedIslandLabel = dynamicIslandLabel?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let normalizedIslandLabel = trimmedIslandLabel.isEmpty
             ? String(normalizedLiveLabel.prefix(8))
             : String(trimmedIslandLabel.prefix(8))
-        let trimmedSymbolName = iconSymbolName?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let trimmedSymbolName = dynamicIslandIcon?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let normalizedSymbolName = Self.normalizedSymbolName(from: trimmedSymbolName)
 
         let state = LAActivityAttributes.ContentState(
             liveActivityLabel: normalizedLiveLabel,
             dynamicIslandLabel: normalizedIslandLabel,
             iconSymbolName: normalizedSymbolName,
-            iconTextColor: iconTextColor
+            iconTextColor: elementsColor
         )
         let content = ActivityContent(state: state, staleDate: nil)
 

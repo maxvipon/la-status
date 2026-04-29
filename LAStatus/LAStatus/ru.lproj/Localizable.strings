@@ -1,26 +1,25 @@
 "Live Activity Status" = "Статус Live Activity";
 "TEST" = "ТЕСТ";
-"Live Activity" = "Live Activity";
 "Show Live Activity: Corp VPN" = "Показать Live Activity: Corp VPN";
 "Show Live Activity: External VPN" = "Показать Live Activity: External VPN";
 "Hide Live Activity" = "Скрыть Live Activity";
+
 "How to use with Shortcuts" = "Как использовать с Командами";
 "Add action **Show Live Activity**." = "Добавьте действие **Show Live Activity**.";
-"Set **Live Activity Label**." = "Укажите **Подпись Live Activity**.";
-"Set **Dynamic Island Label** (up to 8 chars)." = "Укажите **Подпись Dynamic Island** (до 8 символов).";
+"Set Live Activity **Title**." = "Укажите **Заголовок** для Live Activity.";
+"Set Dynamic Island **Label**." = "Укажите **Лейбл** для Dynamic Island.";
+"Optional: set Dynamic Island **Icon name** from **[SF Symbols](https://developer.apple.com/sf-symbols/)** (default: `network`)." = "Опционально: укажите **Название иконки** для Dynamic Island из списка **[SF Symbols](https://developer.apple.com/sf-symbols/)** (по умолчанию: `network`).";
+"Optional: set **Color** (default: **White**)." = "Опционально: укажите **Цвет** (по умолчанию: **Белый**).";
 "Use **Hide Live Activity** action to stop the Live Activity." = "Используйте действие **Hide Live Activity**, чтобы скрыть Live Activity.";
 
-"Show Live Activity" = "Show Live Activity";
-"Sets custom labels for Live Activity and Dynamic Island." = "Задает пользовательские подписи для Live Activity и Dynamic Island.";
+"Show Live Activity" = "Показать Live Activity";
 "Sets the title and optional appearance for Live Activity and Dynamic Island." = "Задает заголовок и дополнительные настройки внешнего вида для Live Activity и Dynamic Island.";
+"Live Activity Title" = "Текст для Live Activity";
 "Title" = "Заголовок";
 "Dynamic Island Label" = "Текст Dynamic Island";
-"SF Symbol Name" = "SF Symbol Name";
-"Icon & Text Color" = "Цвет";
-"Any text" = "Любой текст";
-"up to 8 symbols" = "до 8 символов";
+"Dynamic Island Icon (SF Symbol)" = "Иконка Dynamic Island (SF Symbol)";
+"Color" = "Цвет";
 "Accent" = "Акцент";
-"Accent color" = "Цвет акцента";
 "White" = "Белый";
 "Black" = "Черный";
 "Gray" = "Серый";
@@ -32,6 +31,7 @@
 "Pink" = "Розовый";
 
 "Stops the Live Activity." = "Останавливает Live Activity.";
-"Show Live Activity in %@" = "Show Live Activity в %@";
-"Hide Live Activity in %@" = "Hide Live Activity в %@";
-"Stop Live Activity in %@" = "Stop Live Activity в %@";
+"Show Live Activity with %@" = "Показать Live Activity: %@";
+"Show Live Activity in %@" = "Показать Live Activity в %@";
+"Hide Live Activity in %@" = "Скрыть Live Activity в %@";
+"Stop Live Activity in %@" = "Остановить Live Activity в %@";
