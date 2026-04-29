@@ -1,6 +1,8 @@
 # LA Status
 
-Minimal iPhone app for showing custom text in **Live Activity** and **Dynamic Island**.
+Minimal iPhone app for showing custom text in **Live Activity** and **Dynamic Island** via Shortcuts.
+
+<img width="240" src="assets/shortcut-example.png"> <img width="240" src="assets/dymanic-island-example.png"> <img width="240" src="assets/live-activity-on-lecked-screen.png">
 
 ## What it does
 
