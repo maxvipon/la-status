@@ -31,8 +31,8 @@ Minimal iPhone app for showing custom text in **Live Activity** and **Dynamic Is
 2. Set your own `PARENT_APP_BUNDLE_IDENTIFIER` in `LAStatus/Config/Local.xcconfig`.
 3. Set your own `DEVELOPMENT_TEAM` in the same file.
 4. If needed, set `APP_GROUP_IDENTIFIER` to an App Group enabled for your team.
-5. Open `LAStatus/LAStatus.xcodeproj` in Xcode and build the app.
-6. Add a 1024x1024 app icon in `LAStatus/Assets/AppIcon`.
+5. Add a 1024x1024 app icon in `LAStatus/Assets/AppIcon`.
+6. Open `LAStatus/LAStatus.xcodeproj` in Xcode and build the app.
 
 After first launch, allow Live Activities if prompted.
 
