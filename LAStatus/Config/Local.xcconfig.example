@@ -1,0 +1,7 @@
+// Copy this file to Local.xcconfig and choose values for your own development account.
+// Use a bundle identifier that is available to your Apple Developer team.
+// Set DEVELOPMENT_TEAM to your own team ID.
+// Set APP_GROUP_IDENTIFIER to an App Group enabled for your team when needed.
+PARENT_APP_BUNDLE_IDENTIFIER = com.example.LAStatus
+DEVELOPMENT_TEAM =
+APP_GROUP_IDENTIFIER = group.$(PARENT_APP_BUNDLE_IDENTIFIER).shared

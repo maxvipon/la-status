@@ -1,0 +1,7 @@
+PARENT_APP_BUNDLE_IDENTIFIER = com.example.LAStatus
+APP_GROUP_IDENTIFIER = group.$(PARENT_APP_BUNDLE_IDENTIFIER).shared
+
+DEVELOPMENT_TEAM =
+CODE_SIGN_STYLE = Automatic
+
+#include? "Local.xcconfig"

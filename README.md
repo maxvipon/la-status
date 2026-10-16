@@ -21,14 +21,18 @@ Minimal iPhone app for showing custom text in **Live Activity** and **Dynamic Is
 
 ## Run the app
 
-1. Open `LAStatus/LAStatus.xcodeproj` in Xcode.
-2. Set your Development Team for:
-  - `LAStatus`
-  - `LAStatusWidgetExtension`
-3. Ensure both targets use App Group:
-  - `group.com.lastatus.shared`
-4. Add a 1024x1024 app icon in `LAStatus/Assets/AppIcon`.
-5. Build and run on device.
+1. Copy `Local.xcconfig.example` to `Local.xcconfig` from the repository root:
+
+   ```bash
+   cp LAStatus/Config/Local.xcconfig.example \
+      LAStatus/Config/Local.xcconfig
+   ```
+
+2. Set your own `PARENT_APP_BUNDLE_IDENTIFIER` in `LAStatus/Config/Local.xcconfig`.
+3. Set your own `DEVELOPMENT_TEAM` in the same file.
+4. If needed, set `APP_GROUP_IDENTIFIER` to an App Group enabled for your team.
+5. Open `LAStatus/LAStatus.xcodeproj` in Xcode and build the app.
+6. Add a 1024x1024 app icon in `LAStatus/Assets/AppIcon`.
 
 After first launch, allow Live Activities if prompted.
 
@@ -58,8 +62,8 @@ The app provides two Shortcuts actions:
 
 ## Default identifiers
 
-- App bundle ID: `com.lastatus.LAStatus`
-- Widget bundle ID: `com.lastatus.LAStatus.LAStatusWidget`
-- App Group: `group.com.lastatus.shared`
+- App bundle ID: `com.example.LAStatus` (an example, not guaranteed to be available for installation on a device; choose your own for a signed build).
+- Widget bundle ID: derived automatically as `<PARENT_APP_BUNDLE_IDENTIFIER>.LAStatusWidget`.
+- App Group: `group.com.example.LAStatus.shared` unless overridden in `Local.xcconfig`.
 
-If you change bundle IDs, keep app and widget prefixes aligned.
+The widget bundle ID follows the app bundle ID automatically. Keep personal settings in the ignored `Local.xcconfig` file; do not change them in Xcode's Build Settings editor or commit that file.

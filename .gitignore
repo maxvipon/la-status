@@ -3,6 +3,9 @@
 **/xcuserdata/
 **/*.xcworkspace/xcuserdata/
 
+# Per-machine Xcode build configuration
+/LAStatus/Config/Local.xcconfig
+
 # macOS folder metadata
 .DS_Store
 
